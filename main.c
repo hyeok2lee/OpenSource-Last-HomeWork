@@ -63,7 +63,17 @@ void push(stack_h* S, char item) {
 	}
 }
 char pop(stack_h* S) {
+	if (isEmpty(S))
+		return -1;
 
+	node* old = S->header;
+	char item;
+
+	item = S->header->item;
+	S->header = old->next;
+	free(old);
+
+	return item;
 }
 void printOp(char item) {
 	return;

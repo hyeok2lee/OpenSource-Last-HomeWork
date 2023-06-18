@@ -11,6 +11,7 @@ git clone https://github.com/hyeok2lee/OpenSource-Last-HomeWork.git
 - 스택은 연결리스트로 구현되어있다.
 - 연산자는 아래와 같은 연산자들로 이루어져있으며 우선순위는 다음과 같다.
 
+![image](https://github.com/hyeok2lee/OpenSource-Last-HomeWork/assets/127758902/e8ca48ce-016c-4e52-b41b-ee5f0fbef763)
 
 - 같은 우선순위를 갖는 연산자들은 왼쪽에서 오른쪽으로 계산한다.
 - 입출력에 대한 설명
@@ -34,3 +35,9 @@ A/B-C+D*E-F*G
 A+(B*C+D)*E
 A&&B||C||!(E>F)
 ```
+
+
+### 프로그램 실행 예시
+
+![image](https://github.com/hyeok2lee/OpenSource-Last-HomeWork/assets/127758902/2e08a41b-95d8-4e3c-b6ee-9cb387663dcd)
+

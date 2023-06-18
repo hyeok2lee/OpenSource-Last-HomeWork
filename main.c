@@ -83,7 +83,26 @@ char pop(stack_h* S) {
 	return item;
 }
 void printOp(char item) {
-	return;
+	// @로 치환한 상태 출력은 + 로
+	if (item == '@') {
+		printf("%c", '+');
+	}
+	// #으로 치환한 상태 출력은 -로
+	else if (item == '#') {
+		printf("%c", '-');
+	}
+	// &는 && 2개를 의미
+	else if (item == '&') {
+		printf("%s", "&&");
+	}
+	// |는 || 2개를 의미
+	else if (item == '|') {
+		printf("%s", "||");
+	}
+	// 나머지는 그대로 연산자 출력
+	else {
+		printf("%c", item);
+	}
 }
 int checkOrder(char op) {
 	// 6 ~ 0 그리고 -1 숫자가 높을수록 우선순위가 높음

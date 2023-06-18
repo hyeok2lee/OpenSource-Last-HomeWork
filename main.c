@@ -79,7 +79,31 @@ void printOp(char item) {
 	return;
 }
 int checkOrder(char op) {
-	return 0;
+	// 6 ~ 0 그리고 -1 숫자가 높을수록 우선순위가 높음
+	if (op == '!' || op == '@' || op == '#') {
+		return 6;
+	}
+	else if (op == '*' || op == '/') {
+		return 5;
+	}
+	else if (op == '+' || op == '-') {
+		return 4;
+	}
+	else if (op == '<' || op == '>') {
+		return 3;
+	}
+	else if (op == '&') {
+		return 2;
+	}
+	else if (op == '|') {
+		return 1;
+	}
+	else if (op == '(' || op == '{' || op == '[') {
+		return 0;
+	}
+	else {
+		return -1;
+	}
 }
 void printExp(stack_h* S) {
 

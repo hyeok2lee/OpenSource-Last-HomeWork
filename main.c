@@ -6,6 +6,7 @@ typedef struct Node {
 	char item;
 	int order;
 	struct Node* next;
+
 }node;
 
 typedef struct {
@@ -40,10 +41,26 @@ stack_h* createStack() {
 }
 
 int isEmpty(stack_h* S) {
+	if (S->header == NULL) {
+		return 1;
+	}
 	return 0;
 }
 void push(stack_h* S, char item) {
-	return;
+	node* newNode;
+
+	newNode = (node*)malloc(sizeof(node));
+	newNode->item = item;
+	newNode->order = checkOrder(item);
+
+	if (isEmpty(S)) {
+		newNode->next = NULL;
+		S->header = newNode;
+	}
+	else {
+		newNode->next = S->header;
+		S->header = newNode;
+	}
 }
 char pop(stack_h* S) {
 	if (isEmpty(S))
